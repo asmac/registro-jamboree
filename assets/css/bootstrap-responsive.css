@@ -215,7 +215,11 @@
     float: left;
     margin-left: 20px;
   }
-  .container,
+  .container {
+    width:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 724px;
