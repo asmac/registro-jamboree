@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>Eventos Nacionales</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link href="/assets/css/mobiscroll-2.0.custom.min.css" rel="stylesheet" type="text/css">
 	<link href="/assets/css/bootstrap.css" rel="stylesheet">
 	<link href="/assets/css/asmac.css" rel="stylesheet">
 	<link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -68,8 +70,8 @@
 		<div class="row-fluid">
 			<aside class="span3">					
 				<ul id="side-nav" class="nav nav-tabs nav-stacked">
-					<li><a href="#"><i class="icon-check"></i> Nuevo Equipo</a></li>
-					<li><a href="#"><i class="icon-list"></i> <span class="hidden-tablet">Equipo</span> Pre-Registrado</a></li>
+					<li><a id="show" href="#"><i class="icon-check"></i> Nuevo Equipo</a></li>
+					<li><a id="clear" href="#"><i class="icon-list"></i> <span class="hidden-tablet">Equipo</span> Pre-Registrado</a></li>
 					<li><a href="#"><i class="icon-cog"></i> Configuraciones</a></li>
 				</ul>
 			</aside>
@@ -80,12 +82,14 @@
 						<h3>Módulos</h3>
 					</div>
 					<div class="widget-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<input id="i" name="i" />
 					</div>
 				</div>
 			</div>
@@ -94,7 +98,32 @@
 	<!-- Termina area de contenido -->
 
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/mobiscroll-2.0.custom.min.js"></script>
 	<script src="/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#i').scroller({
+			preset: 'date',
+			invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },
+			dateFormat: 'yyyy-mm-dd',
+			theme: 'jqm',
+			display: 'modal',
+			mode: 'scroller',
+			dateOrder: 'mmD ddy'
+		});
+
+		$('#show').click(function(){
+			$('#i').scroller('show'); 
+			return false;
+		});
+
+		$('#clear').click(function () {
+			$('#i').val('');
+			return false;
+		});
+
+	})
+	</script>
 </body>
 </html>
