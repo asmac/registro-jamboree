@@ -99,13 +99,15 @@
 
 
 	<script src="/assets/js/jquery.min.js"></script>
-	<script src="/assets/js/mobiscroll-2.0.custom.min.js"></script>
+	<script src="/assets/js/mobiscroll.core-2.0.js"></script>
+	<script src="/assets/js/mobiscroll.datetime-2.0.js"></script>
+	<script src="/assets/js/mobiscroll.select-2.0.js"></script>
+	<script src="/assets/js/mobiscroll.jqm-2.0.js"></script>
 	<script src="/assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	$(function(){
 		$('#i').scroller({
 			preset: 'date',
-			invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },
 			dateFormat: 'yyyy-mm-dd',
 			theme: 'jqm',
 			display: 'modal',
@@ -114,16 +116,12 @@
 		});
 
 		$('#show').click(function(){
-			$('#i').scroller('show'); 
-			return false;
-		});
-
-		$('#clear').click(function () {
-			$('#i').val('');
+			alert('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididun');
 			return false;
 		});
 
 	})
 	</script>
+	<script src="/assets/js/fancy-alert.js"></script>
 </body>
 </html>
