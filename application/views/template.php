@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<title>Eventos Nacionales</title>
@@ -109,7 +109,7 @@
 			dateFormat: 'yyyy-mm-dd',
 			theme: 'jqm',
 			display: 'modal',
-			mode: 'scroller',
+			mode: 'clickpick',
 			dateOrder: 'mmD ddy'
 		});
 
