@@ -116,7 +116,7 @@
 		});
 
 		$('#show').click(function(){
-			alert('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididun');
+			alert2('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididun');
 			return false;
 		});
 

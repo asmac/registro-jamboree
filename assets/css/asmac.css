@@ -273,6 +273,12 @@ body {
   background-image: linear-gradient(top, #7D4DA7, #613485);
   background-repeat: repeat-x;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#7D4DA7', endColorstr='#613485', GradientType=0);
+  text-shadow: 0 0 0;
+}
+
+.ui-bar-b [class^="icon-"], 
+.ui-bar-b [class*=" icon-"] {
+  margin-right: 10px;
 }
 
 .dwb-c a, .dwb-s a {
