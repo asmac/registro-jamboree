@@ -70,9 +70,11 @@
 		<div class="row-fluid">
 			<aside class="span3">					
 				<ul id="side-nav" class="nav nav-tabs nav-stacked">
-					<li><a id="show" href="#"><i class="icon-check"></i> Nuevo Equipo</a></li>
-					<li><a id="clear" href="#"><i class="icon-list"></i> <span class="hidden-tablet">Equipo</span> Pre-Registrado</a></li>
+					<li><a href="#"><i class="icon-check"></i> Nuevo Equipo</a></li>
+					<li><a href="#"><i class="icon-list"></i> <span class="hidden-tablet">Equipo</span> Pre-Registrado</a></li>
 					<li><a href="#"><i class="icon-cog"></i> Configuraciones</a></li>
+					<li><a href="#" id="confirm"><i class="icon-exclamation-sign"></i> Confirm Dialog</a></li>
+					<li><a href="#" id="alert"><i class="icon-warning-sign"></i> Alert Dialog</a></li>
 				</ul>
 			</aside>
 
@@ -115,11 +117,15 @@
 			dateOrder: 'mmD ddy'
 		});
 
-		$('#show').click(function(){
-			alert2('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididun');
+		$('#confirm').click(function(){
+			jConfirm('¿Realmente desea eliminar los elementos seleccionados?', function(){ return false; });
 			return false;
 		});
 
+		$('#alert').click(function(){
+			jAlert('Este es un ejemplo de Alert');
+			return false;
+		});
 	})
 	</script>
 	<script src="/assets/js/fancy-alert.js"></script>

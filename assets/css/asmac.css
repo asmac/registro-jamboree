@@ -281,6 +281,15 @@ body {
   margin-right: 10px;
 }
 
+.dwb-s a:focus,  .dwb-c a:focus{
+  outline: 1px dotted #ddd;
+}
+
+.centrado {
+  width: 100%;
+  text-align: center;
+}
+
 .dwb-c a, .dwb-s a {
   width: 47%;
   display: inline-block;
